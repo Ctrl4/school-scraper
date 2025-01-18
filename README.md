@@ -14,7 +14,7 @@ A modular web scraping framework for collecting and enriching school data from v
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ctrl4th/school-scraper.git
+git clone https://github.com/Ctrl4/school-scraper.git
 cd school-scraper
 ```
 
