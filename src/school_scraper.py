@@ -17,9 +17,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class SchoolScraper:
     def __init__(self):
-        # Configure Chrome options
+        # Initialize Chrome options
         self.options = Options()
+        self.options.add_argument("--headless")
         self.options.add_argument("--window-size=1024,768")
+        self.options.add_argument("--no-sandbox")
+        self.options.add_argument("--disable-dev-shm-usage")
 
         self.driver = webdriver.Chrome(options=self.options)
         self.wait = WebDriverWait(self.driver, 10)
