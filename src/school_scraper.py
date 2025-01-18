@@ -24,6 +24,17 @@ class SchoolScraper:
         self.driver = webdriver.Chrome(options=self.options)
         self.wait = WebDriverWait(self.driver, 10)
         self.schools_data = []
+        
+        # Add logging configuration
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s'
+        )
+        self.logger = logging.getLogger(__name__)
+        
+        # Pagination state
+        self.current_page = 1
+        self.processed_urls = set()
 
         # Add logging configuration
         logging.basicConfig(
@@ -34,6 +45,7 @@ class SchoolScraper:
         # Pagination state
         self.current_page = 1
         self.processed_urls = set()
+
 
     def wait_for_element(self, by, selector, timeout=10, condition="presence"):
         """Wait for an element with configurable conditions"""
