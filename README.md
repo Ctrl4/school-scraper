@@ -30,8 +30,12 @@ pip install -e .  # Installs in editable mode with dependencies from setup.py
 ```
 
 ### Running the Scraper
+From the command line:
+```bash
+python src/main.py
+```
 
-Basic usage:
+Basic usage from the python interpreter:
 ```python
 from src.scrapers.texas import TexasSchoolScraper, TexasSchoolEnricher
 
